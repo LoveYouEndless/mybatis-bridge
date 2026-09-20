@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.github.mybatisbridge.navigation.MapperLookupTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-09-20T03:17:22.137Z" hostname="DESKTOP-6VUL3KR" time="2.577">
+  <properties/>
+  <testcase name="testFindsStatementForMapperMethod" classname="io.github.mybatisbridge.navigation.MapperLookupTest" time="2.577"/>
+  <system-out><![CDATA[Test log file: file:///D:/idea_workspace/mybatis-jump/.intellijPlatform/sandbox/MyBatis%20Jump/IU-2025.2.3/log-test/idea.log
+]]></system-out>
+  <system-err><![CDATA[Configuration file for j.u.l.LogManager does not exist: D:\idea-2025.2.3\test-log.properties
+]]></system-err>
+</testsuite>

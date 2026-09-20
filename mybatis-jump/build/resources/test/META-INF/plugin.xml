@@ -1,0 +1,13 @@
+<idea-plugin>
+  <idea-version since-build="233" until-build="" />
+  <version>0.1.0</version>
+  <id>io.github.mybatisbridge</id>
+  <name>MyBatis Jump</name>
+  <vendor>MyBatis Jump</vendor>
+  <description><![CDATA[<p>Free navigation between MyBatis mapper interfaces and XML statements.</p>]]></description>
+  <depends>com.intellij.modules.java</depends>
+  <extensions defaultExtensionNs="com.intellij">
+    <codeInsight.lineMarkerProvider language="JAVA" implementationClass="io.github.mybatisbridge.navigation.JavaMapperLineMarkerProvider" />
+    <codeInsight.lineMarkerProvider language="XML" implementationClass="io.github.mybatisbridge.navigation.XmlMapperLineMarkerProvider" />
+  </extensions>
+</idea-plugin>
