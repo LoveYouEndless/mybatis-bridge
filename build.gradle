@@ -1,0 +1,32 @@
+import org.jetbrains.intellij.platform.gradle.TestFrameworkType
+
+plugins {
+    id 'java'
+    id 'org.jetbrains.intellij.platform'
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.13.2'
+
+    intellijPlatform {
+        local('D:/idea-2025.2.3')
+        bundledPlugin('com.intellij.java')
+        testFramework(TestFrameworkType.Platform.INSTANCE)
+    }
+}
+
+intellijPlatform {
+    instrumentCode.set(false)
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.release = 17
+    options.encoding = 'UTF-8'
+}
+
+tasks {
+    patchPluginXml {
+        sinceBuild = '233'
+        untilBuild = ''
+    }
+}

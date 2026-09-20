@@ -1,0 +1,25 @@
+pluginManagement {
+    plugins {
+        id 'org.jetbrains.intellij.platform.settings' version '2.16.0'
+    }
+}
+
+plugins {
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '1.0.0'
+    id 'org.jetbrains.intellij.platform.settings' version '2.16.0'
+}
+
+rootProject.name = 'MyBatis Jump'
+
+dependencyResolutionManagement {
+    repositories {
+        maven { url = uri('D:/repository') }
+        mavenCentral()
+        // Prefer the official JetBrains repository over the cache redirector.
+        maven { url = uri('https://www.jetbrains.com/intellij-repository/releases') }
+        maven { url = uri('https://www.jetbrains.com/intellij-repository/snapshots') }
+        intellijPlatform {
+            defaultRepositories()
+        }
+    }
+}
