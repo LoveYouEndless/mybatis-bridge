@@ -5,6 +5,24 @@ plugins {
     id 'org.jetbrains.intellij.platform'
 }
 
+def localPublishConfig = file('marketplace-publish.yml')
+def yamlValue = { String key ->
+    if (!localPublishConfig.isFile()) {
+        return null
+    }
+    def line = localPublishConfig.readLines('UTF-8').find { it ==~ /^\s*${java.util.regex.Pattern.quote(key)}\s*:\s*.+$/ }
+    if (!line) {
+        return null
+    }
+    def value = line.replaceFirst(/^\s*${java.util.regex.Pattern.quote(key)}\s*:\s*/, '').trim()
+    value = value.replaceFirst(/^['"]/, '').replaceFirst(/['"]\s*(#.*)?$/, '')
+    value ?: null
+}
+def yamlFile = { String key ->
+    def path = yamlValue(key)
+    path ? file(path) : null
+}
+
 dependencies {
     testImplementation 'junit:junit:4.13.2'
 
@@ -17,6 +35,17 @@ dependencies {
 
 intellijPlatform {
     instrumentCode.set(false)
+
+    signing {
+        certificateChainFile = providers.provider { yamlFile('certificate-chain-file') }
+        privateKeyFile = providers.provider { yamlFile('private-key-file') }
+        password = providers.provider { yamlValue('private-key-password') }
+    }
+
+    publishing {
+        token = providers.provider { yamlValue('token') }
+        channels = ['default']
+    }
 }
 
 tasks.withType(JavaCompile).configureEach {
@@ -28,5 +57,6 @@ tasks {
     patchPluginXml {
         sinceBuild = '233'
         untilBuild = ''
+        changeNotes = file('CHANGELOG.md').getText('UTF-8')
     }
 }

@@ -1,0 +1,6 @@
+# Copy this file to marketplace-publish.yml and fill in local values.
+# marketplace-publish.yml is ignored by Git and must never be committed.
+token: "paste-your-marketplace-token-here"
+certificate-chain-file: "C:/path/to/chain.crt"
+private-key-file: "C:/path/to/private-key.pem"
+private-key-password: "your-private-key-password"

@@ -2,6 +2,7 @@
     <id>io.github.mybatisbridge</id>
     <name>MyBatis Jump</name>
     <vendor>MyBatis Jump</vendor>
+    <icon>pluginIcon.svg</icon>
     <description><![CDATA[
         <p>Free navigation between MyBatis mapper interfaces and XML statements.</p>
     ]]></description>
