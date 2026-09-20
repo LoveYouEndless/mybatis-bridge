@@ -13,7 +13,6 @@ rootProject.name = 'MyBatis Jump'
 
 dependencyResolutionManagement {
     repositories {
-        maven { url = uri('D:/repository') }
         mavenCentral()
         // Prefer the official JetBrains repository over the cache redirector.
         maven { url = uri('https://www.jetbrains.com/intellij-repository/releases') }

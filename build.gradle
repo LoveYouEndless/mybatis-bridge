@@ -9,7 +9,7 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
 
     intellijPlatform {
-        local('D:/idea-2025.2.3')
+        intellijIdeaCommunity('2025.2.3')
         bundledPlugin('com.intellij.java')
         testFramework(TestFrameworkType.Platform.INSTANCE)
     }

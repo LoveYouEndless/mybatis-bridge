@@ -21,10 +21,10 @@ MyBatis Jump 是一个免费的 IntelliJ IDEA 插件，用于在 MyBatis Mapper 
 
 ### 开发构建
 
-使用 JDK 17 或更高版本打开项目。当前开发环境可以执行：
+使用 JDK 17 或更高版本打开项目，首次构建会自动下载目标 IntelliJ IDEA 平台及依赖：
 
 ```powershell
-D:\gradle\gradle-9.0.0\bin\gradle.bat buildPlugin
+.\gradlew.bat buildPlugin
 ```
 
 插件 ZIP 会生成在 `build/distributions` 目录。
@@ -56,10 +56,10 @@ MyBatis Jump is a free IntelliJ IDEA plugin for fast two-way navigation between 
 
 ### Development Build
 
-Open the project with JDK 17 or newer. In the current development environment, run:
+Open the project with JDK 17 or newer. The first build downloads the target IntelliJ IDEA platform and dependencies automatically:
 
 ```powershell
-D:\gradle\gradle-9.0.0\bin\gradle.bat buildPlugin
+.\gradlew.bat buildPlugin
 ```
 
 The plugin ZIP is generated in `build/distributions`.
