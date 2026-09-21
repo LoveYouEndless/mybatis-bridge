@@ -30,6 +30,7 @@ dependencies {
         intellijIdeaCommunity('2025.2.3')
         bundledPlugin('com.intellij.java')
         testFramework(TestFrameworkType.Platform.INSTANCE)
+        zipSigner('0.1.43')
     }
 }
 
@@ -37,13 +38,21 @@ intellijPlatform {
     instrumentCode.set(false)
 
     signing {
-        certificateChainFile = providers.provider { yamlFile('certificate-chain-file') }
-        privateKeyFile = providers.provider { yamlFile('private-key-file') }
-        password = providers.provider { yamlValue('private-key-password') }
+        if (yamlFile('certificate-chain-file')) {
+            certificateChainFile.set(yamlFile('certificate-chain-file'))
+        }
+        if (yamlFile('private-key-file')) {
+            privateKeyFile.set(yamlFile('private-key-file'))
+        }
+        if (yamlValue('private-key-password')) {
+            password.set(yamlValue('private-key-password'))
+        }
     }
 
     publishing {
-        token = providers.provider { yamlValue('token') }
+        if (yamlValue('token')) {
+            token.set(yamlValue('token'))
+        }
         channels = ['default']
     }
 }
@@ -55,8 +64,8 @@ tasks.withType(JavaCompile).configureEach {
 
 tasks {
     patchPluginXml {
-        sinceBuild = '233'
-        untilBuild = ''
+        sinceBuild = '252'
+        untilBuild = '252.*'
         changeNotes = file('CHANGELOG.md').getText('UTF-8')
     }
 }
