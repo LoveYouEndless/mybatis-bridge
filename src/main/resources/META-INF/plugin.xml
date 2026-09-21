@@ -1,6 +1,6 @@
 <idea-plugin>
     <id>io.github.mybatisbridge</id>
-    <name>MyBatis Link</name>
+    <name>MyBatis Bridge</name>
     <vendor>Yimeng</vendor>
     <icon>pluginIcon.svg</icon>
     <description><![CDATA[

@@ -1,8 +1,8 @@
-# MyBatis Link
+# MyBatis Bridge
 
 ## 中文说明
 
-MyBatis Link 是一个免费的 IntelliJ IDEA 插件，用于在 MyBatis Mapper Java 文件与 Mapper XML 文件之间快速双向跳转。
+MyBatis Bridge 是一个免费的 IntelliJ IDEA 插件，用于在 MyBatis Mapper Java 文件与 Mapper XML 文件之间快速双向跳转。
 
 ### 当前功能
 
@@ -37,7 +37,7 @@ SQL 日志捕获、参数还原和日志格式转换暂未加入。导航功能�
 
 ## English
 
-MyBatis Link is a free IntelliJ IDEA plugin for fast two-way navigation between MyBatis mapper Java files and mapper XML files.
+MyBatis Bridge is a free IntelliJ IDEA plugin for fast two-way navigation between MyBatis mapper Java files and mapper XML files.
 
 ### Current Features
 
