@@ -1,6 +1,6 @@
 # 更新日志
 
-本文件记录 MyBatis Mapper Navigator 的重要变更。
+本文件记录 MyBatis Link 的重要变更。
 
 ## 0.1.0 - 2026-09-20
 
