@@ -8,3 +8,4 @@ out/
 *.iws
 marketplace-publish.yml
 .marketplace/
+docs/

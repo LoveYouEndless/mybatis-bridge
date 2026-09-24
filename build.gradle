@@ -27,7 +27,7 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
 
     intellijPlatform {
-        intellijIdeaCommunity('2025.2.3')
+        intellijIdeaCommunity('2023.3')
         bundledPlugin('com.intellij.java')
         testFramework(TestFrameworkType.Platform.INSTANCE)
         zipSigner('0.1.43')
@@ -64,8 +64,8 @@ tasks.withType(JavaCompile).configureEach {
 
 tasks {
     patchPluginXml {
-        sinceBuild = '252'
-        untilBuild = '252.*'
+        sinceBuild = '233'
+        untilBuild = '263.*'
         changeNotes = file('CHANGELOG.md').getText('UTF-8')
     }
 }

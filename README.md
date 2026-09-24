@@ -15,7 +15,7 @@ MyBatis Bridge 是一个免费的 IntelliJ IDEA 插件，用于在 MyBatis Mappe
 
 ### 兼容性
 
-- IntelliJ IDEA 2023.3（构建号 233）及更高版本。
+- IntelliJ IDEA 2023.3 至 2026.3 系列（构建号 233 至 263）。
 - 插件以 Java 17 字节码构建。
 - 当前开发和验证版本：IntelliJ IDEA 2025.2.3。
 
@@ -50,7 +50,7 @@ MyBatis Bridge is a free IntelliJ IDEA plugin for fast two-way navigation betwee
 
 ### Compatibility
 
-- IntelliJ IDEA 2023.3 (build 233) and newer.
+- IntelliJ IDEA 2023.3 through 2026.3 series (builds 233 through 263).
 - Built with Java 17 bytecode.
 - Current development and verification version: IntelliJ IDEA 2025.2.3.
 
